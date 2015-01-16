@@ -1,0 +1,43 @@
+word = 'unncessary'
+#print word.find('n', start)
+
+def letterLocater(word, string):
+    start = 0
+    foundAt = []
+    while start < len(word):        
+        location = word.find(string, start)
+        if location == -1:
+            break
+        elif location >= 0:
+            foundAt.append(location)
+            start = (location + 1)            
+            return foundAt
+print 'Letter located in position(s):'
+
+print letterLocater(word, 'n')
+
+##start = 0
+##foundAt = ''
+##while start < len(word):        
+##    
+##    location = word.find('n', start)
+##    if location == -1:
+##         break
+##    elif location >= 0:
+##        foundAt += (str(location) + str(','))
+##        start = (location + 1)
+##print 'Letter located in position(s):', foundAt
+##print foundAt
+
+##start = 0
+##foundAt = []
+##while start < len(word):        
+##    
+##    location = word.find('n', start)
+##    if location == -1:
+##         break
+##    elif location >= 0:
+##        foundAt.append(location)
+##        start = (location + 1)
+##print 'Letter located in position(s):', foundAt
+##print foundAt
